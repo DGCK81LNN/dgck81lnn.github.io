@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang=zh-cmn-Hans>
+<head>
+  <meta charset=utf-8>
+  <title>施工中 - 灵魂小站</title>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <link rel=stylesheet href="https://dgck81lnn.github.io/bootstrap-lnn/dist/bootstrap-lnn.min.css">
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-color: rgba(51, 191, 171, 33%);
+    }
+    #main {
+      width: 20rem;
+      background-color: var(--bs-light);
+      color: var(--bs-dark);
+    }
+    #icon {
+      color: var(--bs-danger);
+      width: 20vh;
+      height: 20vh;
+      filter: drop-shadow(0 0.125rem 0.25rem rgba(var(--bs-black-rgb), .075));
+    }
+    #links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    #links li {
+      margin: 0 0.5rem;
+    }
+    @media (prefers-color-scheme: dark) {
+      html {
+        background-color: black;
+      }
+      #main {
+        background-color: var(--bs-dark);
+        color: var(--bs-light);
+      }
+    }
+  </style>
+</head>
+<body lang=zh-cmn-Hans>
+  <div id=main class="p-4 rounded border shadow">
+    <main>
+      <svg id=icon class="bi bi-cone-striped mb-3" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+        <path d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/>
+      </svg>
+      <header>
+        <h1 class="display-6" lang=en>Under construction</h1>
+        <h1 class="display-2">施工中</h1>
+      </header>
+      <p>灵魂小站主站将进行升级改造，<br
+        >目前暂时关闭。</p>
+    </main>
+    <footer>
+      <ul id=links class="list-unstyled mb-0">
+        <li><a href="https://github.com/DGCK81LNN">GitHub</a>
+        <li><a href="https://space.bilibili.com/328066747">Bilibili</a>
+        <li><a href="https://dgck81lnn.github.io/blog/">LNN 的博客!</a>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
