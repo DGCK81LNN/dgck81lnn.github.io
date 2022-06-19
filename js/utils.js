@@ -1,33 +1,26 @@
-/**
- * @author DGCK81LNN
- * @overview 几个简单实用（×）的util。
- * @copyright 2020 DGCK81LNN.
- * @license MPL-2.0
- */
-
 // DATE UTIL
 
-/**
- * 按指定位数格式化整数。
- * 
- * @param {number} num 要格式化的数字。
- * @param {(number|false)} [len=2] 目标位数。
- * @param {boolean} sign 是否显示正号。
- * @returns {string}
- */
-function zeroizeLNN(num, len=2, sign) {
-    num = Math.floor(num);
-    var str = Math.abs(num).toString();
-    if (len !== false) {
-        if (str.length > len)
-            str = str.substr(-len);
-        else
-            while (str.length < len) str = "0" + str;
-    }
-    if (sign) str = (num < 0 ? "-" : "+") + str;
-    return str;
-}
 {
+    /**
+     * 按指定位数格式化整数。
+     * 
+     * @param {number} num 要格式化的数字。
+     * @param {(number|false)} [len=2] 目标位数。
+     * @param {boolean} sign 是否显示正负号。
+     * @returns {string}
+     */
+    function zeroizeLNN(num, len=2, sign) {
+        num = Math.floor(num);
+        var str = Math.abs(num).toString();
+        if (len !== false) {
+            if (str.length > len)
+                str = str.substr(-len);
+            else
+                while (str.length < len) str = "0" + str;
+        }
+        if (sign) str = (num < 0 ? "-" : "+") + str;
+        return str;
+    }
     Date.LNN_DATE_FORMAT = {
         'yyyy': t => zeroizeLNN(t.getFullYear(), 4),
         'yy': t => zeroizeLNN(t.getFullYear()),
