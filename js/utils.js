@@ -181,6 +181,7 @@ this.$$ = (...ids) => ids.map(id => window[id] = document.getElementById(id));
             let j = Math.randIntLNN(0, i + 1);
             [this[i], this[j]] = [this[j], this[i]];
         }
+        return this;
     }
     Object.defineProperty(Array.prototype, "randSortLNN", {
         value: randSortLNN
