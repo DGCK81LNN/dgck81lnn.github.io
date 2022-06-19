@@ -163,7 +163,7 @@ this.$$ = (...ids) => ids.map(id => window[id] = document.getElementById(id));
      * @param {number} to 随机数的最大值加1。
      * @returns {number} 给定范围内的随机整数。
      */
-    let randIntLNN = (from, to) => from + (0 | (Math.random() * (to - from)));
+    const randIntLNN = (from, to) => from + (0 | (Math.random() * (to - from)));
     Math.randIntLNN = randIntLNN;
     /**
      * 获得数组中的随机元素。
@@ -171,14 +171,14 @@ this.$$ = (...ids) => ids.map(id => window[id] = document.getElementById(id));
      * @this {Array} Array的实例。
      * @returns {*} 随机选取的元素。
      */
-    let randItemLNN = () =>this[randIntLNN(0, this.length)];
+    function randItemLNN () { return this[Math.randIntLNN(0, this.length)] };
     Object.defineProperty(Array.prototype, "randItemLNN", {
         value: randItemLNN
     });
     /* @this {Array} */
     function randSortLNN () {
         for (let i = this.length - 1; i; --i) {
-            let j = randIntLNN(0, i + 1);
+            let j = Math.randIntLNN(0, i + 1);
             [this[i], this[j]] = [this[j], this[i]];
         }
     }
