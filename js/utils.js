@@ -1,34 +1,27 @@
-/**
- * @author DGCK81LNN
- * @overview 几个简单实用（×）的util。
- * @copyright 2020 DGCK81LNN.
- * @license MPL-2.0
- */
-
 // DATE UTIL
 
-/**
- * 按指定位数格式化整数。
- * 
- * @param {number} num 要格式化的数字。
- * @param {(number|false)} [len=2] 目标位数。
- * @param {boolean} sign 是否显示正号。
- * @returns {string}
- */
-function zeroizeLNN(num, len=2, sign) {
-    num = Math.floor(num);
-    var str = Math.abs(num).toString();
-    if (len !== false) {
-        if (str.length > len)
-            str = str.substr(-len);
-        else
-            while (str.length < len) str = "0" + str;
-    }
-    if (sign) str = (num < 0 ? "-" : "+") + str;
-    return str;
-}
 {
-    let LNN_DATE_FORMAT = {
+    /**
+     * 按指定位数格式化整数。
+     * 
+     * @param {number} num 要格式化的数字。
+     * @param {(number|false)} [len=2] 目标位数。
+     * @param {boolean} sign 是否显示正负号。
+     * @returns {string}
+     */
+    function zeroizeLNN(num, len=2, sign) {
+        num = Math.floor(num);
+        var str = Math.abs(num).toString();
+        if (len !== false) {
+            if (str.length > len)
+                str = str.substr(-len);
+            else
+                while (str.length < len) str = "0" + str;
+        }
+        if (sign) str = (num < 0 ? "-" : "+") + str;
+        return str;
+    }
+    Date.LNN_DATE_FORMAT = {
         'yyyy': t => zeroizeLNN(t.getFullYear(), 4),
         'yy': t => zeroizeLNN(t.getFullYear()),
         'M': t => t.getMonth() + 1,
@@ -62,6 +55,7 @@ function zeroizeLNN(num, len=2, sign) {
     /**
      * 格式化日期。
      * 
+     * @this {Date}
      * @param {string} fmt 格式字符串。参考下表：
      * 
      * |  符号   |       含义       |   示例   |
@@ -116,7 +110,7 @@ function zeroizeLNN(num, len=2, sign) {
                 chars += char;
                 continue;
             }
-            if (chars in LNN_DATE_FORMAT) result += LNN_DATE_FORMAT[chars](this);
+            if (Date.LNN_DATE_FORMAT.hasOwnProperty(chars)) result += Date.LNN_DATE_FORMAT[chars](this);
             else result += chars;
             if (char == "\\")
                 result += fmt[i], chars = "";
@@ -130,6 +124,7 @@ function zeroizeLNN(num, len=2, sign) {
 // GETELEMENTS UTIL
 
 /**
+ * @deprecated
  * 获取文档中所有带id的元素（虽然很多浏览器都会自动做这件事）。
  * 
  * @returns {HTMLElement[]}
@@ -141,14 +136,15 @@ this.getElementsLNN = () => [...document.querySelectorAll("*[id]")].map(e => win
  * @param {string} id 元素的id。
  * @returns {?HTMLElement}
  */
-this.$$$ = id => window[id] = document.getElementById(id);
+this.$$$ = document.getElementById.bind(document);
 /**
+ * @deprecated
  * 批量获取带id的元素。
  * 
  * @param  {...string} args 每个元素的id。
- * @returns {Array.<?HTMLElement>} 每个元素。
+ * @returns {Array<?HTMLElement>} 每个元素。
  */
-this.$$ = (...args) => args.map($$$);
+this.$$ = (...ids) => ids.map(id => window[id] = document.getElementById(id));
 
 // RANDOMIZE UTIL
 
@@ -160,34 +156,28 @@ this.$$ = (...args) => args.map($$$);
      * @param {number} to 随机数的最大值加1。
      * @returns {number} 给定范围内的随机整数。
      */
-    var randIntLNN = (from, to) => Math.floor(Math.random() * (to - from)) + from;
+    const randIntLNN = (from, to) => from + (0 | (Math.random() * (to - from)));
     Math.randIntLNN = randIntLNN;
     /**
      * 获得数组中的随机元素。
      * 
-     * @this {Array.} Array的实例。
+     * @this {Array} Array的实例。
      * @returns {*} 随机选取的元素。
      */
-    var randItemLNN = () =>this[randBetweenLNN(0, this.length)];
+    function randItemLNN () { return this[Math.randIntLNN(0, this.length)] };
     Object.defineProperty(Array.prototype, "randItemLNN", {
-        value: randItemLNN,
-        enumerable: false
+        value: randItemLNN
     });
+    /* @this {Array} */
     function randSortLNN () {
-        var arr = [],
-            i = 0;
-        for (; i < this.length; i++)
-            arr.push({
-                r: randLNN(),
-                v: this[i]
-            });
-        arr.sort((a, b) => a.r - b.r);
-        for (i = 0; i < this.length; i++)
-            this[i] = arr[i].v;
+        for (let i = this.length - 1; i; --i) {
+            let j = Math.randIntLNN(0, i + 1);
+            [this[i], this[j]] = [this[j], this[i]];
+        }
+        return this;
     }
     Object.defineProperty(Array.prototype, "randSortLNN", {
-        value: randSortLNN,
-        enumerable: false
+        value: randSortLNN
     });
 }
 
@@ -311,6 +301,6 @@ this.Base64LNN = function() {
         /** @returns {string} */
         decodeUTF8(str) {
             return utf8Decoder.decode(this.decode(str));
-        },
+        }
     };
 } ();
