@@ -62,7 +62,7 @@
   addMeta("format-detection", "telephone=no")
 
   requireStylesheet("/bootstrap-lnn/dist/bootstrap-lnn.min.css")
-  requireScript("https://cdn.polyfill.io/v3/polyfill.min.js?features=es2019,es2020,es2021,es2022")
+  //requireScript("https://cdn.polyfill.io/v3/polyfill.min.js?features=es2019,es2020,es2021,es2022")
 
   if (uses("vue")) {
     requireStylesheet("/bootstrap-lnn/dist/bootstrap-vue-3-lnn.min.css")
