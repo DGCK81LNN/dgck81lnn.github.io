@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="/js/auto-dark-theme.js"></script>
+  <link rel="stylesheet" href="/bootstrap-lnn/dist/bootstrap-lnn.min.css">
+  <link rel="icon" href="/site_icon.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+</head>
+<body>
+  {% include "soulsite/header", tab = header-tab %}
+  {{ content }}
+  {% include "soulsite/footer" %}
+</body>
+</html>
