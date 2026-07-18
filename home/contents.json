@@ -7,7 +7,7 @@
     {
         "title": "Love with Richard under epidemic (V3网页版)",
         "body": "<p>灵魂实验室控制台实验性作品，<a href=\"https://space.bilibili.com/300711293\">天府灵山行者</a>（Richard M）创作的互动式小说。<s>快去帮助女主攻略Richard！</s></p>",
-        "link": "https://dgck81lnn.github.io/apps/lab/console.html?path=/res/down/SoulLC/LoveWithRichard.soullc.mjs"
+        "link": "/apps/lab/console.html?path=/res/down/SoulLC/LoveWithRichard.soullc.mjs"
     },
     {
         "title": "博客区",
@@ -17,12 +17,12 @@
     {
         "title": "沙盒区",
         "body": "<p>本站应用的临时测试会放在这里。</p>",
-        "link": "/sandbox"
+        "link": "https://dgck81lnn.github.io/sandbox"
     },
     {
         "title": "遗留区",
         "body": "<p>灵魂小站旧站的一些实用工具（目前有<b>舞线练习场</b>）会上传到这里。</p>",
-        "link": "/legacy"
+        "link": "https://dgck81lnn.github.io/legacy"
     },
     {
         "title": "更多内容即将到来...",
