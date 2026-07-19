@@ -1,9 +1,24 @@
 ---
 layout: page.liquid
-title: 灵魂小站
 ---
 
-<main class="container-lg">
+<style>
+  .bi { vertical-align: -.125em }
+  .hanging-icon { line-height: 1.2 }
+  .blur-spoiler { filter: blur(.25rem); opacity: 0.25; transition: filter .25s, opacity .25s }
+  .blur-spoiler:hover { filter: none; opacity: 1 }
+  @supports (text-emphasis: dot) and (text-emphasis-position: under) { em { font-style: normal; text-emphasis: dot; text-emphasis-position: under } }
+</style>
+
+<svg class="d-none">
+  <defs>
+    <symbol id="bi-arrow-right" viewBox="0 0 16 16">
+      <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main class="container-lg mb-5">
   <div class="px-4 pt-5 pb-4 my-5 text-center">
     <img class="mx-auto mb-2 bg-light border d-block rounded-circle" alt=""
       src="https://vudrux.site/res/DGCK81LNN.svg" width="150" height="150">
@@ -12,47 +27,89 @@ title: 灵魂小站
       <p class="lead row gx-0 justify-content-center mb-4">
         <span class="col-auto">「前端热衷者」</span>
         <span class="col-auto">「希顶社区管理」</span>
-        <span class="col-auto">「菜也不练音游人」</span>
+        <span class="col-auto">「菜就多练音游人」</span>
       </p>
-      <p class="lead fs-4 mb-0">以及——<br>「玩原神玩的」</p>
+      <p class="lead fs-4 mb-0">以及——<br
+        ><a class="link-body-emphasis link-opacity-100-hover link-underline-opacity-0 link-underline-opacity-25-hover"
+          href="https://www.bilibili.com/video/BV11oG86fEeu/?t=13" target="_blank" referrerpolicy="no-referrer"
+          title="哇，还有（小）魔女会的自我介绍魔法"
+        >「玩原神玩的」</a
+      ></p>
     </div>
   </div>
 
-  <div class="text-center">
-    <svg class="bi bi-cone-striped text-danger" xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16"><path d="m9.97 4.88.953 3.811C10.159 8.878 9.14 9 8 9c-1.14 0-2.158-.122-2.923-.309L6.03 4.88C6.635 4.957 7.3 5 8 5s1.365-.043 1.97-.12zm-.245-.978L8.97.88C8.718-.13 7.282-.13 7.03.88L6.275 3.9C6.8 3.965 7.382 4 8 4c.618 0 1.2-.036 1.725-.098zm4.396 8.613a.5.5 0 0 1 .037.96l-6 2a.5.5 0 0 1-.316 0l-6-2a.5.5 0 0 1 .037-.96l2.391-.598.565-2.257c.862.212 1.964.339 3.165.339s2.303-.127 3.165-.339l.565 2.257 2.391.598z"/></svg>
-    施工中
+  <div class="row py-5 g-4 mx-0 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+    <div class="col d-flex align-items-start">
+      <div class="hanging-icon fs-2 text-body-emphasis me-3">
+        <svg width="1em" height="1em" fill="currentColor" class="bi bi-code-slash" viewBox="0 0 16 16"><path d="M10.478 1.647a.5.5 0 1 0-.956-.294l-4 13a.5.5 0 0 0 .956.294zM4.854 4.146a.5.5 0 0 1 0 .708L1.707 8l3.147 3.146a.5.5 0 0 1-.708.708l-3.5-3.5a.5.5 0 0 1 0-.708l3.5-3.5a.5.5 0 0 1 .708 0m6.292 0a.5.5 0 0 0 0 .708L14.293 8l-3.147 3.146a.5.5 0 0 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 0 0-.708 0"/></svg>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">前端带师</h3>
+        <p>因为父亲是程序员，我从很小就接触了软件编程，Visual Basic 6 是我学习的第一门编程语言。后来自学 Web 前端技术，对 JavaScript 编程颇有研究。</p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="hanging-icon fs-2 text-body-emphasis me-3">
+        <svg width="1em" height="1em" fill="currentColor" class="bi" viewBox="0 0 512 512"><path d="m160 67c3-20 20-35 40-35 22 0 40 18 40 40V428c0 29-23 52-52 52-23 0-43-16-50-37-2-6-7-11-14-11-33-2-60-30-60-64 0-12 3-23 9-32 4-7 2-15-3-20-13-13-22-32-22-52 0-28 16-53 40-64 8-4 11-14 7-22-4-9-7-19-7-30 0-34 26-63 59-67 7-1 12-7 13-14m96 410c15 21 40 35 68 35 34 0 63-20 77-49 45-8 79-48 79-95 0-13-3-26-8-38 15-18 24-41 24-66 0-35-18-67-45-85 3-10 5-20 5-31 0-47-32-86-75-97-9-29-36-51-69-51-23 0-43 10-56 27-13-17-33-27-56-27-32 0-60 22-69 51-43 11-75 50-75 97 0 11 2 21 5 31-27 18-45 50-45 85 0 25 9 48 24 66-5 12-8 25-8 38 0 47 34 87 79 95 14 29 43 49 77 49 28 0 53-14 68-35m16-189V72c0-22 18-40 40-40 20 0 37 15 40 35 1 7 6 13 13 14 34 4 59 33 59 67 0 11-2 21-7 30-4 8-1 18 7 22 24 11 40 36 40 64 0 20-8 39-22 52-5 5-7 13-3 20 6 9 9 20 9 32 0 34-26 62-60 64-7 0-12 5-14 11-7 22-27 37-50 37-29 0-52-23-52-52V288"/></svg>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">Esolangs</h3>
+        <p>在用编程解决现实问题之余，我也遇见了一些<a href="https://www.qiuwenbaike.cn/wiki/深奥的编程语言" target="_blank" referrerpolicy="no-referrer" title="深奥编程语言">另类的编程语言</a>。<s>你不觉得用<a href="https://github.com/wenyan-lang/wenyan/blob/master/README.zh-Hans.md" target="_blank" referrerpolicy="no-referrer" title="文言——文言文编程语言">文言文编程</a>很神圣吗？</s>将“编程思想”往奇怪的方向发展，让我很是着迷。</p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="hanging-icon fs-2 text-body-emphasis me-3">
+        <svg width="1em" height="1em" fill="currentColor" class="bi" viewBox="0 0 640 512"><path d="M480 112c9 0 16-7 16-16s-7-16-16-16-16 7-16 16 7 16 16 16m84-48c-2-12-7-23-15-33 7-2 11-8 11-15 0-9-7-16-16-16H448C374 0 313 56 305 128H147c-34 0-63 20-76 49-40 4-71 38-71 79v48c0 9 7 16 16 16s16-7 16-16V256c0-21 13-39 32-45 0 11 2 21 6 31l34 81s0 0 0 1v1l-8 19c-13 28-15 60-6 90l13 49c5 17 21 29 39 29h33c26 0 45-25 38-51l-16-57c-1-5-1-11 2-16l8-19c5-13 8-27 9-41l88 20V472c0 22 18 40 40 40h32c22 0 40-18 40-40V318c20-20 32-47 32-78 0-2 0-4 0-6 0 0 0-1 0-2V192h7l2 3c19 28 58 36 87 18 20-13 31-36 29-60l-4-49 65-22c4-1 6-5 6-9 0-5-4-9-9-9H564M448 32h38c25 0 45 19 48 43l7 81c1 12-4 24-14 30-15 9-34 5-43-9l-7-10c-3-4-8-7-13-7H432c-9 0-16 7-16 16v53c0 1 0 3 0 4 0 3 0 5 0 7 0 24-10 45-27 60-3 3-5 7-5 12V472c0 4-4 8-8 8H344c-4 0-8-4-8-8V335c0-8-6-15-13-16-2 0-3-1-5-1L202 292c-5-1-10 0-14 4s-6 9-5 14 1 9 1 14c0 11-2 22-7 33l-8 19c-5 11-6 25-2 37l16 57c1 5-3 10-8 10H142c-4 0-7-2-8-6l-13-48c-7-23-5-48 4-69l8-19c2-5 3-9 3-14s-1-9-3-14l-33-80c-3-6-4-13-4-19 0-28 23-51 51-51H320c9 0 16-7 16-16 0-62 50-112 112-112"/></svg>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">小马⁈</h3>
+        <p>初中时在好朋友 DannyLuan 影响下认识了《<a href="https://zh.moegirl.org.cn/小马宝莉：友谊的魔力" target="_blank" referrerpolicy="no-referrer" title="我的小马驹：友谊是魔法">小马宝莉</a>》（以及《<a href="https://zh.moegirl.org.cn/Undertale" target="_blank" referrerpolicy="no-referrer" title="传说之下（地下传说）">Undertale</a>》），从此逐渐开始爱好二次元。</p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="hanging-icon fs-2 text-body-emphasis me-3">
+        <svg width="1em" height="1em" fill="currentColor" class="bi bi-music-note" viewBox="0 0 16 16"><path d="M9 13c0 1.105-1.12 2-2.5 2S4 14.105 4 13s1.12-2 2.5-2 2.5.895 2.5 2"/><path d="M9 3v10H8V3z"/><path d="M8 2.82a1 1 0 0 1 .804-.98l3-.6A1 1 0 0 1 13 2.22V4L8 5z"/></svg>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">音乐、音游</h3>
+        <p>也学过一点乐器和声乐，节奏感比较好，从《<a href="https://zh.moegirl.org.cn/跳舞的线" target="_blank" referrerpolicy="no-referrer" title="跳舞的线">跳舞的线</a>》，到《Malody》《osu!》《Phigros》《冰与火之舞》《世界计划》——<s>我去，<a href="https://zh.moegirl.org.cn/虚拟歌手" target="_blank" referrerpolicy="no-referrer" title="虚拟歌手">初音未来</a>！</s></p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="hanging-icon fs-2 text-body-emphasis me-3">
+        <svg width="1em" height="1em" fill="currentColor" class="bi bi-fire" viewBox="0 0 16 16"><path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15"/></svg>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">人造语，希顶</h3>
+        <p>谁不想用别人看不懂的语言写日记呢？就这样我发现了<a href="https://mw.lojban.org/papri/Lojban?uselang=zh" target="_blank" referrerpolicy="no-referrer" title="逻辑语">逻辑语</a>、道本语，在 Mishiro 同学的推荐下又接触了<a href="https://wiki.xdi8.top/wiki/希顶语" target="_blank" referrerpolicy="no-referrer" title="逻辑语">希顶语</a>，目前是希顶社区活跃成员之一。</p>
+      </div>
+    </div>
+    <div class="col d-flex align-items-start">
+      <div class="hanging-icon fs-2 text-body-emphasis me-3">
+        <svg width="1em" height="1em" fill="currentColor" class="bi bi-lightbulb" viewBox="0 0 16 16"><path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/></svg>
+      </div>
+      <div>
+        <h3 class="fs-2 text-body-emphasis">点子王？但是…</h3>
+        <p>想法很多，精力有限。搁置多时的项目何时重启？时间推移，不可避免总有一些计划被我抛弃，但我相信有些真正重要的东西我会坚持到底。</p>
+      </div>
+    </div>
+    </div>
   </div>
 
-  <!--<div class="row g-4 pt-4 pb-5 mb-5 row-cols-1 row-cols-lg-3">
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em" aria-hidden="true"><use xlink:href="#toggles2"></use></svg>
-      </div>
-      <div>
-        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="#" class="btn btn-primary">Primary button</a>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em" aria-hidden="true"><use xlink:href="#toggles2"></use></svg>
-      </div>
-      <div>
-        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="#" class="btn btn-primary">Primary button</a>
-      </div>
-    </div>
-    <div class="col d-flex align-items-start">
-      <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-        <svg class="bi" width="1em" height="1em" aria-hidden="true"><use xlink:href="#toggles2"></use></svg>
-      </div>
-      <div>
-        <h3 class="fs-2 text-body-emphasis">Featured title</h3>
-        <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-        <a href="#" class="btn btn-primary">Primary button</a>
-      </div>
-    </div>
-  </div>-->
+  <div class="mx-auto col-sm-11 col-xl-10 col-xxl-9 py-5">
+    <h2 class="text-center">啥啥“DGC……”？</h2>
+    <p>“DGCK”是“大干草块”的缩写，这是我和几个小学同学组成的小团体，我们曾一起在《Minecraft》世界中度过一段快乐的时光。“Minecraft”谐音“麦块<sub>儿</sub>”，而在《Minecraft》中，干草块可以由小麦合成得到，即“小<em>麦</em>方<em>块</em>”。为了与游戏内的干草块方块区分，我们将“<em>大</em>干草块”作为游戏本身的代称，后来演变成团体的名字。最开始使用首字母缩写是因为当时“草”容易被游戏判定为敏感词，后来用多了就固定下来了。</p>
+    <p>“81”和“LNN”是我自己的十六进制编号和字母代号，我当时用这类编号标记自己社交圈里的朋友。<b>“LNN”是我最常用的代号，称呼我时就不必用完整的那一串了～</b><s class="text-body-tertiary blur-spoiler">才不会告诉你“LNN”来自于小名“罗诺诺”呢！</s></p>
+  </div>
+
+  <div class="mx-auto py-5 d-grid gap-3 flex-column flex-sm-row d-flex" style="width: fit-content">
+    <a class="btn btn-outline-primary btn-lg px-4" href="/tools">
+      探索
+      <svg width="1em" height="1em" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"><use href="#bi-arrow-right"/></svg>
+    </a>
+    <a class="btn btn-outline-info btn-lg px-4" href="/blog/">
+      博客
+      <svg width="1em" height="1em" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"><use href="#bi-arrow-right"/></svg>
+    </a>
+  </div>
 </main>

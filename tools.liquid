@@ -1,0 +1,64 @@
+---
+layout: page.liquid
+title: 工具
+header_tab: tools
+---
+
+<style>
+  .bi { vertical-align: -.125em }
+  .tool-group-title { scroll-margin-top: 6rem }
+</style>
+
+<svg class="d-none">
+  <defs>
+    <symbol id="bi-arrow-right" viewBox="0 0 16 16">
+      <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+    </symbol>
+  </defs>
+</svg>
+
+<main class="container-lg mb-5">
+  <h1>工具导航</h1>
+
+  <ul id="nav" class="nav my-3 justify-content-center sticky-top bg-body-tertiary border rounded" style="top: .75em">
+    {%- for group in tool_groups %}
+    <li class="nav-item">
+      <a class="nav-link" href="#{{ group.id | url_encode | escape }}">{{ group.label | escape }}</a>
+    </li>
+    {%- endfor %}
+  </ul>
+
+  {%- for group in tool_groups %}
+  <h2 class="tool-group-title" id="{{ group.id | escape }}">{{ group.label | escape }}</h2>
+  <ul class="mb-4 list-unstyled row g-2 row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xxl-4">
+    {%- for tool in group.tools %}
+    <li class="col">
+      <div class="card h-100">
+        <div class="card-body d-flex flex-column">
+          <h3 class="card-title fs-5">{{ tool.title }}</h3>
+          <div class="flex-fill">
+            {{ tool.description | markdownify }}
+          </div>
+          <div>
+            {%- for link in tool.links %}
+            <a href="{{ link.url | escape }}" class="btn btn-{{ link.variant | default: "primary" | escape }}">
+              {{ link.label | default: "前往" | escape }}
+              <svg width="1em" height="1em" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16"><use href="#bi-arrow-right"/></svg>
+            </a>
+            {%- endfor %}
+          </div>
+        </div>
+      </div>
+    </li>
+    {%- endfor %}
+  </ul>
+  {%- endfor %}
+</main>
+
+<script>
+  const nav = document.getElementById("nav")
+  window.addEventListener("scroll", () => {
+    const stuck = nav.getBoundingClientRect().top <= parseFloat(getComputedStyle(nav).top) + .5
+    nav.classList[stuck ? "add" : "remove"]("shadow-sm")
+  })
+</script>

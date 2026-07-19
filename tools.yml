@@ -1,0 +1,201 @@
+tool_groups:
+  - id: linguistic
+    label: 语言文字
+    tools:
+      - title: 〇改希顶转写器
+        description: |
+          〇改希顶语与汉字互转转写工具，支持多音字提示和旧拼写兼容，提供网页版与 npm 包
+        links:
+          - url: https://dgck81lnn.github.io/xdi8-transcriber/
+          - url: https://github.com/DGCK81LNN/xdi8-transcriber
+            label: GitHub
+            variant: secondary
+
+      - title: Xdi8IME 希顶输入法
+        description: |
+          开发中的网页希顶字母输入法，支持实体键盘和软键盘输入
+        links:
+          - url: https://dgck81lnn.github.io/xdi8-ime/
+            label: 前往预览
+          - url: https://github.com/DGCK81LNN/xdi8-ime
+            label: GitHub
+            variant: secondary
+
+      - title: LNN 中华语字 SVG 生成器
+        description: |
+          将 [LNN 中华语字](https://wiki.xdi8.top/)绘制成 SVG，支持普通话和希顶语方案
+        links:
+          - url: https://dgck81lnn.github.io/lnnzhyz2svg/
+          - url: https://github.com/DGCK81LNN/lnnzhyz2svg
+            label: GitHub
+            variant: secondary
+
+      - title: LNN 中华语字输入法
+        description: |
+          [LNN 中华语字](https://wiki.xdi8.top/)（普通话方案）输入工具
+        links:
+          - url: https://dgck81lnn.github.io/lnnzhyz_ime/
+          - url: https://github.com/DGCK81LNN/lnnzhyz_ime
+            label: GitHub
+            variant: secondary
+
+      - title: Fairfax XdPUA 字体
+        description: |
+          [Fairfax](https://www.kreativekorp.com/software/fonts/fairfax/) ([HD](https://www.kreativekorp.com/software/fonts/fairfaxhd/)) 字体的希顶字母 PUA 编码版
+        links:
+          - url: https://github.com/DGCK81LNN/fairfax_xdpua
+            label: GitHub
+            variant: secondary
+
+  - id: programming
+    label: 编程语言
+    tools:
+      - title: WhatLang 解释器
+        description: |
+          [WhatLang](https://wiki.xdi8.top/wiki/WhatLang) 编程语言的网页版解释器
+        links:
+          - url: https://dgck81lnn.github.io/whatlang/
+          - url: https://github.com/DGCK81LNN/whatlang
+            label: GitHub
+            variant: secondary
+
+      - title: AS brainf
+        description: |
+          用 [AssemblyScript](https://www.assemblyscript.org) 编写的带循环优化的 Brainfuck 解释器
+        links:
+          - url: https://dgck81lnn.github.io/as-brainf/
+          - url: https://github.com/DGCK81LNN/as-brainf
+            label: GitHub
+            variant: secondary
+
+      - title: 阅文秘术 stdin
+        description: |
+          [文言（wenyan-lang）](https://wy-lang.org/)的标准输入库，提供同步读取行、字、词、数等功能
+        links:
+          - url: https://github.com/DGCK81LNN/wenyan-stdin
+            label: GitHub
+            variant: secondary
+
+      - title: Parentheless 表达式解析器
+        description: |
+          使用停顿（空白）代替括号来指示运算顺序的 esolang 概念测试
+        links:
+          - url: https://dgck81lnn.github.io/parentheless/
+          - url: https://github.com/DGCK81LNN/parentheless
+            label: GitHub
+            variant: secondary
+
+  - id: games
+    label: 游戏
+    tools:
+      - title: 原神抽卡记录可视化
+        description: |
+          将原神抽卡记录以直观详细的格式呈现，支持查看卡池信息、保底进度、十连抽详情等
+        links:
+          - url: http://vudrux.site/gi/gacha/
+            label: 真魂 vudrux
+            variant: info
+          - url: https://github.com/DGCK81LNN/gi-gacha
+            label: GitHub
+            variant: secondary
+
+      - title: Sonolus 音效包构建工具
+        description: |
+          为节奏游戏 [Sonolus](https://sonolus.com/) 构建和维护音效包的 Python 工具，支持 YAML 配置与音频去重
+        links:
+          - url: https://github.com/DGCK81LNN/sonolus-sfx-builder
+            label: GitHub
+            variant: secondary
+
+      - title: osu! 歌曲信息与 pp 显示
+        description: |
+          适用于 [osu!StreamCompanion](https://github.com/Piotrekol/StreamCompanion) / [tosu](https://tosu.app) 的信息显示，显示实时 BPM、pp、判定统计等信息，可用于 OBS 浏览器源
+        links:
+          - url: https://github.com/DGCK81LNN/lnn_osu_overlay
+            label: GitHub
+            variant: secondary
+
+  - id: creative
+    label: 艺术创意
+    tools:
+      - title: Megalovania 但是…生成器
+        description: |
+          将 Undertale、Deltarune 原声音乐每小节的节拍按指定顺序重新组合的音乐改编生成器
+        links:
+          - url: https://dgck81lnn.github.io/megalo/
+          - url: https://github.com/DGCK81LNN/megalo
+            label: GitHub
+            variant: secondary
+
+      - title: 想要5000兆円生成器
+        description: |
+          “5000兆円”风格文字效果生成器（中文字体修复，fork 自 yurafuca/5000choyen）
+        links:
+          - url: https://dgck81lnn.github.io/5000choyen/index_cn.html
+          - url: https://github.com/DGCK81LNN/5000choyen
+            label: GitHub
+            variant: secondary
+
+      - title: 《原神启动 器》
+        description: |
+          自动AB循环“原神启动的小曲”来对齐启动时机
+        links:
+          - url: https://dgck81lnn.github.io/yuanshen-qidong/
+          - url: https://github.com/DGCK81LNN/yuanshen-qidong
+            label: GitHub
+            variant: secondary
+
+      - title: 简易钢琴模拟器
+        description: |
+          基于 Web Audio ，适用于触摸屏的简易钢琴模拟器，Safari 9 可用
+        links:
+          - url: https://dgck81lnn.github.io/piano/
+          - url: https://github.com/DGCK81LNN/piano
+            label: GitHub
+            variant: secondary
+
+      - title: Love with Richard 网页版
+        description: |
+          [天府灵山行者](https://space.bilibili.com/300711293)创作的互动式小说网页移植
+        links:
+          - url: https://dgck81lnn.github.io/lwr-web/
+          - url: https://github.com/DGCK81LNN/lwr-web
+            label: GitHub
+            variant: secondary
+
+  - id: streaming
+    label: 直播辅助
+    tools:
+      - title: BongoCat Mver 配置管理器
+        description: |
+          为 BongoCat Mver 桌宠/键位显示快速切换多套配置的命令行工具
+        links:
+          - url: https://github.com/DGCK81LNN/bongocatmver_config_manager
+            label: GitHub
+            variant: secondary
+
+      - title: OBS 浏览器源自定义事件
+        description: |
+          通过热键在 OBS 浏览器源中触发自定义 JavaScript 事件的 Python 脚本
+        links:
+          - url: https://github.com/DGCK81LNN/obs-custom-browser-events.py
+            label: GitHub
+            variant: secondary
+
+  - id: collections
+    label: 更多
+    tools:
+      - title: 沙盒区
+        description: 收纳另外一些不成熟的简单网页工具
+        links:
+          - url: https://dgck81lnn.github.io/sandbox/
+          - url: https://github.com/DGCK81LNN/sandbox
+            label: GitHub
+            variant: secondary
+      - title: 遗留区
+        description: 收纳一些古老但有历史意义(?)的小网页
+        links:
+          - url: https://dgck81lnn.github.io/legacy/
+          - url: https://github.com/DGCK81LNN/legacy
+            label: GitHub
+            variant: secondary

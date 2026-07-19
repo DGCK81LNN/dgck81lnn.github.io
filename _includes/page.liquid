@@ -2,15 +2,20 @@
 <html lang="zh-cmn-Hans">
 <head>
   <meta charset="utf-8">
-  <title>{{ title }}</title>
+  <title>{% if title %}{{ title | escape }} | {% endif %}灵魂小站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="/js/auto-dark-theme.js"></script>
   <link rel="stylesheet" href="/bootstrap-lnn/dist/bootstrap-lnn.min.css">
   <link rel="icon" href="/site_icon.png">
+  <link rel="shortcut icon" href="/site_icon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  {%- unless no_canonical_url %}
+  <link rel="canonical" href="https://dgck81lnn.github.io{{ page.url }}" />
+  {%- endunless %}
+  <meta name="generator" content="{{ eleventy.generator }}">
 </head>
 <body>
-  {% include "soulsite/header", tab = header-tab %}
+  {% include "soulsite/header", tab: header_tab %}
   {{ content }}
   {% include "soulsite/footer" %}
 </body>
