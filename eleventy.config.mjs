@@ -3,6 +3,7 @@ import { marked } from "marked"
 
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("*.png")
+  eleventyConfig.addPassthroughCopy("*.svg")
   eleventyConfig.addPassthroughCopy("*.xml")
   eleventyConfig.addPassthroughCopy("*.ico")
   eleventyConfig.addPassthroughCopy("assets/")
