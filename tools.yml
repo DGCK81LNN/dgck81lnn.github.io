@@ -17,13 +17,14 @@ tool_groups:
         links:
           - url: https://dgck81lnn.github.io/xdi8-ime/
             label: 前往预览
+            variant: warning
           - url: https://github.com/DGCK81LNN/xdi8-ime
             label: GitHub
             variant: secondary
 
       - title: LNN 中华语字 SVG 生成器
         description: |
-          将 [LNN 中华语字](https://wiki.xdi8.top/)绘制成 SVG，支持普通话和希顶语方案
+          将 [LNN 中华语字](https://wiki.xdi8.top/wiki/LNN_中华语字)绘制成 SVG，支持普通话和希顶语方案
         links:
           - url: https://dgck81lnn.github.io/lnnzhyz2svg/
           - url: https://github.com/DGCK81LNN/lnnzhyz2svg
@@ -32,7 +33,7 @@ tool_groups:
 
       - title: LNN 中华语字输入法
         description: |
-          [LNN 中华语字](https://wiki.xdi8.top/)（普通话方案）输入工具
+          [LNN 中华语字](https://wiki.xdi8.top/wiki/LNN_中华语字)（普通话方案）输入工具
         links:
           - url: https://dgck81lnn.github.io/lnnzhyz_ime/
           - url: https://github.com/DGCK81LNN/lnnzhyz_ime
